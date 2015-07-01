@@ -1,0 +1,47 @@
+<head>
+   <link rel="stylesheet" href="style.css" />
+   <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading1">My To Do List</h1>
+        <form id="addToListForm">
+            <input type="text" name="listItemInput" placeholder="to do item" id="toDoList" />
+            <label for="listItemInput"><input type="submit" class="addToList" value="Add to List" /></label>
+        </form>
+
+        <div class="listItems"></div>
+
+        <ul class="info">
+            <li>Drag and drop items in your list to sort them.</li>
+            <li>Check items off the list when complete.</li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- underscore -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- custom script -->
+    <script type="text/javascript" src="script.js"></script>  
+    <script type="text/template" id="toDoTemplate">
+    <div class="toDo">
+    <p>
+    <%= name %>
+    </p>
+    <hr>
+    </div>
+    </script>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="toDoList"></div>
+        </div>
+    </div>
+</div>
+</body>
